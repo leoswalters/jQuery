@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>jQuery method examples</title>
+        <meta name="description" content="Exercise 1 of working with jQuery">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+         <script type="text/javascript" src="js/jquery.js"></script>
+    </head>
+    <body>
+      <header>
+        <h1>Common jQuery Methods</h1>
+      </header>
+       <!-- .addClass -->
+      <section class="clearfix">
+        <div class="main-content">
+          <h2>.addClass()</h2>
+          <p>Description: Add a class to the selector or element specified.</p>
+        </div>
+        <div class="btn-section">
+          <button id="btn1">Demo</button>
+          <p id="demo1">This is the sample text.</p>
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function(){
+              $("button").click(function(){
+              $("#demo1").addClass("cursive");
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+       <!-- .after -->
+      <section class="clearfix">
+        <div class="main-content">
+          <h2>.after()</h2>
+          <p>Description: Insert content, specified by the parameter, after each element specified.</p>
+        </div>
+        <div class="btn-section">
+          <button id="btn2">Demo</button>
+          <p id="demo2">This is the sample text.
+          </p>
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function(){
+              $("#btn1").click(function(){
+              $("#demo2").after("<h4>You just added an h4 tag <h4>");
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+       <!-- .append -->
+       <section class="clearfix">
+        <div class="main-content">
+          <h2>.append()</h2>
+          <p>Description: Insert content, specified by the parameter, to the end of each element.</p>
+        </div>
+        <div class="btn-section">
+          <button id="btn3">Demo</button>
+          <p id="demo3">This is the sample text.
+          </p>
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function(){
+              $("#btn3").click(function(){
+              $("#demo3").append("<button>Easy Button</button>");
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+       <!-- .attr -->
+       <section class="clearfix">
+        <div class="main-content">
+          <h2>.attr()</h2>
+          <p>Description: Get the value of an attribute for the first element in the set of matched elements.</p>
+        </div>
+        <div class="btn-section">
+          <button id="btn4">Demo</button>
+          <p id="yo">This <em title="Rocky!" id="demo4">is the sample </em> text.</p>
+          <p id="demo4-1">The title attribute is: </p>
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function(){
+              $("#btn4").click(function(){
+                $("#demo4-1").append($("demo4").attr("title"));
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+       <!-- .before -->
+       <section class="clearfix">
+        <div class="main-content">
+          <h2>.append()</h2>
+          <p>Description: Insert content, specified by the parameter, before each element in the set of matched elements.</p>
+        </div>
+        <div class="btn-section">
+          <button id="btn5">Demo</button>
+          <p id="demo5">This is the sample text.
+          </p>
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function(){
+              $("#btn5").click(function(){
+                $("#demo5").before("<p>&#9734</p>");
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+       <!-- .html -->
+       <section class="clearfix">
+        <div class="main-content">
+          <h2>.html()</h2>
+          <p>Description: Set the HTML contents of each element in the set of matched elements. It can also be used as a getter if you don"t pass a parameter.</p>
+        </div>
+        <div class="btn-section">
+          <button id="btn6">Demo</button>
+          <p id="demo6">This is the sample text.
+          </p>
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function(){
+              $("#btn6").click(function(){
+                $("#demo6").html("The text was replaced.");
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+       <!-- .text -->
+       <section class="clearfix">
+        <div class="main-content">
+          <h2>.text()</h2>
+          <p>Description: Set the content of the element to the specified text. It can also be used as a getter if you don"t pass a parameter. Note how differently the string is treated by .text() and .html().</p>
+        </div>
+        <div class="btn-section">
+          <button id="btn7">Demo</button>
+          <p id="demo7">This is the sample text.
+          </p>
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function(){
+              $("#btn7").click(function(){
+                $("#demo7").html("The text was replaced.");
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+      <!-- .val -->
+       <section class="clearfix">
+        <div class="main-content">
+          <h2>.val()</h2>
+          <p>Description: Set the value of each element in the set of matched elements. It can also be used as a getter if you don"t pass a parameter.</p>
+        </div>
+        <div class="btn-section">
+          <button id="btn8">Demo</button>
+          <p id="demo8">This is the sample text.
+          </p>
+          <input id="input1" type="text" value="Default Value">
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function(){
+              $("#btn8").click(function(){
+                var text = $("#btn8").text();
+                $("#input1").val(text);
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+       <!-- .toggle -->
+       <section class="clearfix">
+        <div class="main-content">
+          <h2>.toggle()</h2>
+          <p>Description: Display or hide the matched elements.</p>
+        </div>
+        <div class="btn-section">
+          <button id="btn9">Demo</button>
+          <img src="img/img1.png" id="demo9">
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function(){
+              $("#btn9").click(function(){
+                $("#demo9").toggle($("#demo9").css("display:none"));
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+       <!-- .hide -->
+       <section class="clearfix">
+        <div class="main-content">
+          <h2>.hide()</h2>
+          <p>Description: Hide the matched elements.</p>
+        </div>
+        <div class="btn-section">
+          <button id="btn10">Demo</button>
+          <img src="img/img1.png" id="demo10">
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function(){
+              $("#btn10").click(function(){
+                $("#demo10").hide();
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+       <!-- .show -->
+       <section class="clearfix">
+        <div class="main-content">
+          <h2>.show()</h2>
+          <p>Description: Display the matched elements.</p>
+        </div>
+        <div class="btn-section">
+          <button id="btn11">Demo</button>
+          <br>
+          <img src="img/img1.png" id="demo11" style="display:none">
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function(){
+              $("#btn11").click(function(){
+                $("#demo11").show("slow", function () {
+                  //animates to show over 600ms
+                });
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+       <!-- .slideDown -->
+       <section class="clearfix">
+        <div class="main-content">
+          <h2>.slideDown()</h2>
+          <p>Description: Display the matched elements with a sliding motion.</p>
+        </div>
+        <div class="btn-section">
+          <button id="btn12">Demo</button>
+          <br>
+          <img src="img/img1.png" id="demo12" style="display:none">
+        </div>
+        <div class="code-block clearfix">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function(){
+              $("#btn12").click(function(){
+                $("#demo12").slideDown(300, function () {
+                  $("#demo12").css("border", "3px solid #606F93");
+                });
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+       <!-- .slideToggle -->
+       <section class="clearfix">
+        <div class="main-content">
+          <h2>.slideToggle()</h2>
+          <p>Description: Display or hide the matched elements with a sliding motion.</p>
+        </div>
+        <div class="btn-section">
+          <button id="btn13">Demo</button>
+          <img src="img/img1.png" id="demo13">
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function() {
+              $("#btn13").click(function(){
+                $("#demo13").slideToggle(1600);
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+       <!-- .slideUp -->
+       <section class="clearfix">
+        <div class="main-content">
+          <h2>.slideUp()</h2>
+          <p>Description: Hide the matched elements with a sliding motion.</p>
+        </div>
+        <div class="btn-section">
+          <button id="btn14">Demo</button>
+          <img src="img/img1.png" id="demo14">
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function() {
+              $("#btn14").click(function(){
+                $("#demo14").slideUp(3000);
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+       <!-- .fadeOut -->
+       <section class="clearfix">
+        <div class="main-content">
+          <h2>.fadeOut()</h2>
+          <p>Description: Hide the matched elements by fading them to transparent.</p>
+        </div>
+        <div class="btn-section">
+          <button id="btn15">Demo</button>
+          <img src="img/img1.png" id="demo15">
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function() {
+              $("#btn15").click(function(){
+                $("#demo15").fadeOut(750);
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+       <!-- .fadeIn -->
+       <section class="clearfix">
+        <div class="main-content">
+          <h2>.fadeIn()</h2>
+          <p>Description: Display the matched elements by fading them to opaque.</p>
+        </div>
+        <div class="btn-section">
+          <button id="btn16">Demo</button>
+          <img src="img/img1.png" id="demo16" style="display:none">
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function() {
+              $("#btn16").click(function(){
+                $("#demo16").fadeIn(1500);
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+       <!-- .focus -->
+       <section class="clearfix">
+        <div class="main-content">
+          <h2>.focus()</h2>
+          <p>Description: Bind an event handler to the "focus" JavaScript event, or trigger that event on an element.</p>
+        </div>
+        <div class="btn-section">
+          <p>
+            <input type="text" id="demo17" value="Click here">
+            </input>
+          </p>
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function(){
+              $("#demo17").focus("slow", function(){
+                $("#demo17").css("background", "pink").val("Thanks!");
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+       <!-- .click -->
+       <section class="clearfix">
+        <div class="main-content">
+          <h2>.click()</h2>
+          <p>Description: Bind an event handler to the "click" JavaScript event, or trigger that event on an element.</p>
+        </div>
+        <div class="btn-section">
+          <p id="demo18">Click Me!</p>
+          <p id="p18" style="visibility:hidden">This text should display once you've clicked on "Click Me"</p>
+        </div>
+        <div class="code-block">
+          <h3>jQuery Code Block</h3>
+          <xmp>
+            $(document).ready(function(){
+              $("#demo18").click(function(){
+                $("#p18").css("visibility", "visible");
+              });
+            });
+          </xmp>
+        </div>
+       </section>
+    </body>
+</html>
